@@ -1,6 +1,7 @@
 package org.classtask;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -19,6 +20,9 @@ public class Amazon {
 		WebElement element = driver.findElement(By.xpath("//a[contains(text(),'Condition')]"));
 	    String text = element.getText();
 		System.out.println(text);
+		
+		WebElement searchBox = driver.findElement(By.id("twotabsearchtextbox"));
+		searchBox.sendKeys("iphone", Keys.ENTER);
 		
 		
 		
